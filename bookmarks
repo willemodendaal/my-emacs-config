@@ -1,0 +1,24 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("My org mode playground file"
+ (filename . "~/my-org-files/temp.org")
+ (front-context-string . "\n\n   Heading thr")
+ (rear-context-string . "|\n\n\n** Heading 3")
+ (position . 614))
+("Org mode keyword reference"
+ (front-context-string . "\n1.5 Typesetting")
+ (rear-context-string . "p: Introduction\n")
+ (position . 34119)
+ (filename . "/Applications/Emacs.app/Contents/Resources/info/org")
+ (info-node . "Conventions")
+ (handler . Info-bookmark-jump))
+("The Org manual"
+ (front-context-string . "ms of the GNU Fr")
+ (rear-context-string . "nt under the ter")
+ (position . 1149)
+ (filename . "/Applications/Emacs.app/Contents/Resources/info/org")
+ (info-node . "Top")
+ (handler . Info-bookmark-jump))
+)
