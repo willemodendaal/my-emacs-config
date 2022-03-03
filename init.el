@@ -80,17 +80,36 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 230 :family "Monaco")))))
-
-					;
-					;
-					;
-					;
-					;
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 230 :width condensed :foundry "nil" :family "Monaco")))))
   
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(tsdh-dark)))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes '(tango-dark)))
+
+;; Load config from other files.
+;; Stolen from https://github.com/wkirschbaum
+(defun setup-custom-config (config-path)
+
+  (setq custom-file (concat config-path "custom.el"))
+  (if (file-exists-p custom-file)
+      (load custom-file)))
+
+(let ((config-path "~/.emacs.d/"))
+  (setup-custom-config config-path))
+
+(defvar will/modules)
+(setq will/modules
+      '(
+        "native"
+       ))
+
+(let ((config-path "~/.emacs.d/modules/"))
+  (dolist (module will/modules)
+    (condition-case err
+        (load (concat "~/.emacs.d/modules/" module ".el"))
+      (error (display-warning "%s" (error-message-string err))))))

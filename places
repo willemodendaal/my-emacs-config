@@ -1,0 +1,6 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/willemodendaal/.emacs.d/"
+  (dired-filename . "/Users/willemodendaal/.emacs.d/modules"))
+ ("/Users/willemodendaal/.emacs.d/modules/"
+  (dired-filename . "/Users/willemodendaal/.emacs.d/modules/native.el"))
+ ("/Users/willemodendaal/.emacs.d/modules/native.el" . 414))
